@@ -1,0 +1,2 @@
+Next Permutation-->use pivort the ele if nums[i]<=nums[i+1] while backward traversal
+                 ->swap it with just next greater than pivort ele(from right or last) and reverse afterward(all next to pivort) to last
