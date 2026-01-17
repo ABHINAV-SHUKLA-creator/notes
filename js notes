@@ -6,8 +6,8 @@
           greet("Abhinav", function (n) {
               console.log("Hello", n);
               });
-   ->Callback Problem → Callback Hell
-       doA(() => {
+   ->Callback Problem → Callback Hell(❌ unreadable ,❌ hard error handling)
+   ex: doA(() => {
         doB(() => {
          doC(() => {
             console.log("Done");
@@ -32,4 +32,7 @@ code:  function counter() {
      console.log(inc()); // 1
      console.log(inc()); // 2
 
-#PROMISES (Solution to Callback Hell)--Object representing future value
+#PROMISES (Solution to Callback Hell)--Object representing future value of an asynchronous operation.
+                    Every promise is always in one of these states:(pending-Still running , fulfilled-Success (resolve) , rejected-Failure (reject))
+      
+ 
