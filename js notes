@@ -1,0 +1,38 @@
+# CALLBACKS--A function passed as an argument to another function.
+          function greet(name, callback) {
+                callback(name);
+               }
+
+          greet("Abhinav", function (n) {
+              console.log("Hello", n);
+              });
+   ->Callback Problem → Callback Hell
+       doA(() => {
+        doB(() => {
+         doC(() => {
+            console.log("Done");
+         });
+        });
+      });
+ 
+     
+# CLOSURE--A function remembers variables from its outer scope even after outer function finishes.
+       (SCOPE + FUNCTION EXPRESSION = CLOSURE)
+code:  function counter() {
+        let count = 0;
+
+        return function () {
+         count++;
+       return count;
+      };
+     }
+
+     const inc = counter();
+
+     console.log(inc()); // 1
+     console.log(inc()); // 2
+
+#PROMISES (Solution to Callback Hell)--Object representing future value
+
+
+  
