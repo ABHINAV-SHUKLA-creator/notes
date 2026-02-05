@@ -1,2 +1,16 @@
 Next Permutation-->use pivort the ele if nums[i]<=nums[i+1] while backward traversal
                  ->swap it with just next greater than pivort ele(from right or last) and reverse afterward(all next to pivort) to last
+
+array problem cheatsheet - 
+                        1️⃣ Two Pointers : Goal → reduce O(n²) → O(n)
+                                          (A) Opposite direction -  left → ← right
+                                          (B) Same direction (fast & slow) - slow →  , fast →→→
+                                          (C) Sliding window ( Used for contiguous subarrays.) -  left →→ , right →→→
+                        2️⃣ Sliding Window : 
+                        3️⃣ Kadane’s Algorithm : 
+                        4️⃣ Prefix Sum : 
+                        5️⃣ Hashing + Array  :
+                        6️⃣ Cyclic Sort / Index Mapping : 
+                        7️⃣ Monotonic Stack : 
+
+
