@@ -1,0 +1,40 @@
+-------------list in python-----------
+x=["raj","NEHA",10,1,2]
+print(x[0])
+print(x[-1])#last element
+
+#slicing
+print(x[1:3])
+
+#sorting-- num>alpha(upperCase>lowerCase)
+x=list(map(str,x))
+x.sort()
+print(x)
+
+#add element
+x.append("ram")#at end
+x.insert(1,100)#at index 1
+print(x)
+
+#x.sort()#can't sort different data type
+
+#extend()->add element of another list
+y=[1,"hi there",100]
+x.extend(y)
+x.append(y)#add list as ele at end 
+print(x)
+
+#modify list
+x[1]=99
+x[4:7]=["cs","python",99] #using slicing
+x[7:10]="it" 
+print(x)
+
+x.remove("i")
+print(x)
+x.pop(1)# pass index if nothing pop last ele
+print(x)
+del x[6:8] # empty defnition for ranged indices
+print(x)
+x.clear() # empty list
+print(x)
