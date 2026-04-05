@@ -36,3 +36,31 @@ code:  function counter() {
                     Every promise is always in one of these states:(pending-Still running , fulfilled-Success (resolve) , rejected-Failure (reject))
       
  
+///////////////////////////////////////// NODE JS  ///////////////////////////////////////////
+
+MODULE PATTERN:-
+if you want to use functions or code in f1.js file to f2.js file WE use module global and exports as object;
+->explicitly mention that part and expose it to other file.
+->example:(in f1.js file)
+          module.exports={ obj_name1//(key)// : function_name1, obj_name2 : function_name2}
+
+         module.exports={ // as object
+    linear : linearSearch,
+    binary : binarySearch
+    }
+      module.exports=linearSearch;//as function
+      - in commanjs module i.e old method
+       (in f2.js file)-  const name=require('./f1.js');    or   const name=require(__dirname + "f1.js");
+
+      const search=require('./server.js');
+let arr=[1,3,5,6,9,23,45,67];
+let x=9;
+console.log("start");
+console.log(search.linear(arr,x));// as obj
+console.log(search.binary(arr,x));
+console.log(search(arr,x));// if as function
+
+
+        - in es module new method
+           (in f2.js file)-  import name 
+
