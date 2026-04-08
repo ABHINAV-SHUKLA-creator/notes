@@ -38,3 +38,56 @@ del x[6:8] # empty defnition for ranged indices
 print(x)
 x.clear() # empty list
 print(x)
+----------class and inheritance---------------
+
+class  record:
+    def show(self,x,y):
+        self.x=n
+        self.y=age
+        print("task compleated")
+n=input("enter an number:")
+age=int(input("enter age:"))
+s=record()
+s.show(n,age)
+
+
+class record:
+    def __init__(self):
+        self.n="raj"
+        self.age=23
+        print(self.n,self.age)
+s=record() 
+
+
+class x:
+    n="raj"
+class y(x):
+    def show(self,a,b):
+        self.roll_no=a
+        self.marks=b
+        print(self.n,self.roll_no,self.marks)  
+s=y()
+a="24I4004"
+b=98
+s.show(a,b)
+
+
+class x:
+    n="raj"
+class y(x):
+    age=20
+class z(y):
+    marks=89
+s=z()
+print("name:",s.n)
+print("Age:",s.age)
+print("marks:",s.marks)
+
+
+class show:
+    def setter(self,n1):
+        self.__n2=n1
+    def getter(self):
+        print(self.__n2)
+s=show()
+s.setter(45)
