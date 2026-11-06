@@ -1,2 +1,25 @@
-Next Permutation-->use pivort the ele if nums[i]<=nums[i+1] while backward traversal
-                 ->swap it with just next greater than pivort ele(from right or last) and reverse afterward(all next to pivort) to last
+// rest api //
+
+
+GET -> read and list the requested data
+PUT -> replace entirely with new data (change all field)
+PATCH -> replace only few fields (partial update)
+POST -> add completly new dataset (don't require url)
+DELETE -> delete the data from data base
+
+idempotency -> A method is idempotent if sending the same request many times leaves the server in the same state as sending it once.
+                 (POST can't be idempotent since it can cause dublication of data in database, somtimes PATCH can too)
+              
+           -> "This is why payment APIs often ask for an “idempotency key” on POST requests, so a retry doesn’t charge the customer twice"
+  
+              # That’s the full lifecycle of an idempotency key:
+                 1.The client generates a UUID (unique key) per logical operation and reuses it on retries.
+                 2.The server atomically claims the key, which prevents races.
+                 3.It processes the request and stores the response together with the key.
+                 4.A repeat of the same key returns the stored response, and a repeat with a different body is rejected.
+                 5.Stale “in progress” keys expire, and the work and the key commit together.
+
+
+genral statuscode in use:
+            200->ok ,201->sucess,400->not found,401->unauthorized,404->forbiden
+
